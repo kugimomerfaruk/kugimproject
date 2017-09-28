@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameList: UILabel!
     @IBOutlet weak var nameEnterTextBox: UILabel!
     @IBAction func addNameButton() {
         
