@@ -8,7 +8,17 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
+    
+    var names : String = ""
+    var namesArray : Array<String> = [] // Hocaya sor !
+    
+    
+    
+    
+    
 
     @IBOutlet weak var nameEnterTextBox: UITextField!
     @IBOutlet weak var nameList: UILabel!
