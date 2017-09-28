@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBAction func addNameButton() {
         
     }
+    @IBAction func clearButton() {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
