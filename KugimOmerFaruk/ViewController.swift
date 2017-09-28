@@ -16,22 +16,27 @@ class ViewController: UIViewController {
     var namesArray : Array<String> = [] // Hocaya sor !
     
     
-    
-    
-    
-
     @IBOutlet weak var nameEnterTextBox: UITextField!
     @IBOutlet weak var nameList: UILabel!
-   
     @IBOutlet weak var alertForCharacterControl: UILabel!
-    
-    
-    
     
     @IBAction func addNameButton() {
         
         
+            
+            if (nameEnterTextBox.text?.characters.count)! >= 5 {
+                names = nameEnterTextBox.text!
+                
+                namesArray.append(names)
+                print(namesArray)
+                
+            } else {
+                alertForCharacterControl.isHidden = false
+            }
+  
     }
+    
+   
     @IBAction func clearButton() {
         
     }
