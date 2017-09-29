@@ -28,9 +28,10 @@ class ViewController: UIViewController {
             print(namesArray)
             names = ""
             
-            for i in namesArray {
-                print(i)
-                names += "\n" + i
+            for (key,i) in namesArray.enumerated() {
+                
+                print(key,i)
+                names += "\n" + String(key+1) + "-) " + i
             }
             nameEnterTextBox.text = ""
             
@@ -52,11 +53,10 @@ class ViewController: UIViewController {
             namesArray.removeLast()
             print(namesArray)
             names = ""
-            for i in namesArray {
-                
-                print(i)
-                names += "\n" + i
-                
+            
+            for (key,i) in namesArray.enumerated() {
+                print(key,i)
+                names += "\n" + String(key+1) + "-) " + i
             }
             nameList.text = names
             
