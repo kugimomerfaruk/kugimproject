@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameList: UILabel!
     @IBOutlet weak var alertForCharacterControl: UILabel!
     
+    
     @IBAction func addNameButton() {
         
         if (nameEnterTextBox.text?.characters.count)! >= 5 {
@@ -36,7 +37,10 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            alertForCharacterControl.isHidden = false
+            //alertForCharacterControl.isHidden = false
+            let alert = UIAlertController(title: "Alert", message: "The name that you entered is less than 5 characters. Please enter the name again.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -48,7 +52,6 @@ class ViewController: UIViewController {
             namesArray.removeLast()
             print(namesArray)
             names = ""
-            
             for i in namesArray {
                 
                 print(i)
@@ -58,8 +61,12 @@ class ViewController: UIViewController {
             nameList.text = names
             
         } else {
-            alertForCharacterControl.isHidden = false
-            alertForCharacterControl.text = "Silinecek bir veri bulunamadı"
+           //alertForCharacterControl.isHidden = false
+            //alertForCharacterControl.text = "Silinecek bir veri bulunamadı"
+            
+            let alert = UIAlertController(title: "Alert", message: "There is no item that you can delete !", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -68,6 +75,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         alertForCharacterControl.isHidden = true
+      
         
     }
     
